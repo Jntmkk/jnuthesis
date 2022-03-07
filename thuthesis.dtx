@@ -3938,11 +3938,11 @@
         {\contentspush{\thecontentslabel\quad}}{}
         {\rmfamily\thu@leaders\thecontentspage}%
       \titlecontents{section}
-        [1em]{}
+        [0em]{}
         {\contentspush{\thecontentslabel\quad}}{}
         {\thu@leaders\thecontentspage}%
       \titlecontents{subsection}
-        [2em]{}
+        [0em]{}
         {\contentspush{\thecontentslabel\quad}}{}
         {\thu@leaders\thecontentspage}%
     \else
@@ -3951,11 +3951,11 @@
         {\contentspush{\MakeUppercase{\thecontentslabel}\quad}\MakeUppercase}{\MakeUppercase}
         {\rmfamily\thu@leaders\thecontentspage}%
       \titlecontents{section}
-        [1em]{}
+        [0em]{}
         {\contentspush{\thecontentslabel\space}}{}
         {\thu@leaders\thecontentspage}%
       \titlecontents{subsection}
-        [2em]{}
+        [0em]{}
         {\contentspush{\thecontentslabel\space}}{}
         {\thu@leaders\thecontentspage}%
     \fi
@@ -4910,48 +4910,34 @@
 %
 % 支持扫描文件替换。
 %    \begin{macrocode}
+\newcommand{\ulinput}[1]{\kaishu{\large{\heiti\underline{~~~~#1~~~~}}}\normalfont}  
 \newcommand{\thu@authorization@frontdate}{%
   日\ifthu@degree@bachelor\hspace{1em}\else\hspace{2em}\fi 期：}
 \newcommand\thu@copyright@page@graduate{%
-  \begingroup
-    \ctexset{
-      chapter = {
-        format     = {\centering\sffamily\erhao},
-        beforeskip = 40bp,
-        afterskip  = 36bp,
-      },
-    }%
-    \thu@chapter*[]{关于学位论文使用授权的说明}%
-    \thispagestyle{empty}%
-  \endgroup
-  \vskip 13bp%
-  \begingroup
-    \fontsize{14bp}{26bp}\selectfont
-    本人完全了解清华大学有关保留、使用学位论文的规定，即：\par
-    清华大学拥有在著作权法规定范围内学位论文的使用权，其中包括：%
-    （1）\nobreak 已获学位的研究生必须按学校规定提交学位论文，%
-    学校可以采用影印、缩印或其他复制手段保存研究生上交的学位论文；\allowbreak
-    （2）\nobreak 为教学和科研目的，学校可以将公开的学位论文作为资料在图书馆、资料室等场所供校内师生阅读，%
-    或在校园网上供校内师生浏览部分内容；\allowbreak
-    \ifthu@degree@doctor
-      （3）\nobreak 根据《中华人民共和国学位条例暂行实施办法》及上级教育主管部门具体要求，向国家图书馆报送相应的学位论文。%
-    \else
-      （3）\nobreak 按照上级教育主管部门督导、抽查等要求，报送相应的学位论文。%
-    \fi
-    \par
-    本人保证遵守上述规定。\par
-  \endgroup
-  \vskip 33bp%
-  \begingroup
-    \fontsize{12bp}{23.4bp}\selectfont
-    \parindent\z@
-    \leftskip 43bp%
-    作者签名：\hspace{4bp}\thu@underline[7em]{}\hspace{47bp}%
-    导师签名：\hspace{4bp}\thu@underline[7em]{}\par
-    \vskip 6bp%
-    日\hspace{2em}期：\hspace{4bp}\thu@underline[7em]{}\hspace{47bp}%
-    日\hspace{2em}期：\hspace{4bp}\thu@underline[7em]{}\par
-  \endgroup
+  {\centering\Huge\kaishu 独~创~~声~明\\}
+  \vspace{15pt}
+  \noindent 本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。
+  除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，
+  也不包含为获得\ulinput{暨南大学}或其他教育机构的学位或证书而使用过的材料。
+  与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。\\
+  \par
+  \noindent 学位论文作者签名：\hspace{115pt}签字日期：~~~~~~年~~~~~~月~~~~~~日\par
+  \vspace{45pt}
+  {\centering\Huge\kaishu 学位论文版权使用授权书\\}
+  \vspace{15pt}
+  \noindent 本学位论文作者完全了解\ulinput{暨南大学}有关保留、使用学位论文的规定，有权保
+  留并向国家有关部门或机构送交论文的复印件和磁盘，允许论文被查阅和借阅。本人授
+  权\ulinput{暨南大学}可以将学位论文的全部或部分内容编入有关数据库进行检索，可以
+  采用影印、缩印或扫描等复制手段保存、汇编学位论文。\\
+  （保密的学位论文在解密后适用本授权书）\\
+  \par
+  \noindent 学位论文作者签名：\hspace{135pt}导师签名：\par
+  \vspace{55pt}
+  \noindent 签字日期：~~~~~~~~~年~~~~~~~月~~~~~~~日\hspace{77pt}签字日期：~~~~~~~~~年~~~~~~月~~~~~~日\\
+  学位论文作者毕业后去向：\\
+  工作单位：\hspace{185pt}电话：\\
+  通讯地址：\hspace{185pt}邮编：\\
+  \thispagestyle{empty}%
 }
 \newcommand\thu@copyright@page@bachelor{%
   \begingroup

@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/v/release/tuna/thuthesis)](https://github.com/tuna/thuthesis/releases/latest)
 [![CTAN](https://img.shields.io/ctan/v/thuthesis)](https://www.ctan.org/pkg/thuthesis)
 
-
+**此仓库 fork 自[清华大学](https://github.com/tuna/thuthesis)Latex 模板，进行了部分修改适合暨南大学信科院研究生论文**
 # ThuThesis
 
 Scroll down for the English version of README.
